@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maven Web Assignment</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f3f6fb;color:#1f2937}
+main{max-width:760px;margin:9vh auto;padding:32px;background:white;border-radius:14px;box-shadow:0 8px 28px #0001}
+h1{color:#174ea6}button{padding:11px 18px;border:0;border-radius:7px;background:#174ea6;color:white;cursor:pointer}
+#status{font-weight:bold;margin-top:20px}
+</style>
+</head>
+<body><main>
+<h1>Maven Web Project</h1>
+<p>This page is part of the Jenkins Maven Web build, test, and deployment assignment.</p>
+<p>Deployment status: <strong id="deployment">Application page loaded</strong></p>
+<button id="test">Test application</button>
+<p id="status" aria-live="polite"></p>
+</main>
+<script>
+document.getElementById('test').addEventListener('click',function(){
+ document.getElementById('status').textContent='SUCCESS: The deployed web application is responding.';
+});
+</script>
+</body></html>
